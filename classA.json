@@ -1,0 +1,127 @@
+{
+  "className": "Calculus I",
+  "classCode": "CLC01",
+  "scheduleDays": "MWF",
+  "scheduleTimes": [
+    {
+      "startHour": "2PM",
+      "endHour": "4PM"
+    }
+  ],
+  "location": {
+    "building": "105",
+    "room": "327"
+  },
+  "students": [
+    {
+      "firstName": "Justin",
+      "lastName": "Smith",
+      "id": 23452353,
+      "grades": {
+        "midterm": 60,
+        "final": 80,
+        "finalGrade": 70
+      }
+    },
+    {
+      "firstName": "Alex",
+      "lastName": "Yang",
+      "id": 22482353,
+      "grades": {
+        "midterm": 88,
+        "final": 50,
+        "finalGrade": 69
+      }
+    },
+    {
+      "firstName": "Travis",
+      "lastName": "Bird",
+      "id": 23459873,
+      "grades": {
+        "midterm": 60,
+        "final": 80,
+        "finalGrade": 70
+      }
+    },
+    {
+      "firstName": "Daniel",
+      "lastName": "Nicks",
+      "id": 23697353,
+      "grades": {
+        "midterm": 95,
+        "final": 85,
+        "finalGrade": 90
+      }
+    },
+    {
+      "firstName": "Steven",
+      "lastName": "Bolton",
+      "id": 14552353,
+      "grades": {
+        "midterm": 60,
+        "final": 55,
+        "finalGrade": 57.5
+      }
+    },
+    {
+      "firstName": "Marcos",
+      "lastName": "Fletcher",
+      "id": 23678353,
+      "grades": {
+        "midterm": 77,
+        "final": 72,
+        "finalGrade": 74.5
+      }
+    },
+    {
+      "firstName": "Jared",
+      "lastName": "Rosen",
+      "id": 23655353,
+      "grades": {
+        "midterm": 40,
+        "final": 62,
+        "finalGrade": 51
+      }
+    },
+    {
+      "firstName": "John",
+      "lastName": "Robinson",
+      "id": 23456453,
+      "grades": {
+        "midterm": 72,
+        "final": 55,
+        "finalGrade": 63.5
+      }
+    },
+    {
+      "firstName": "Justin",
+      "lastName": "Smith",
+      "id": 23452222,
+      "grades": {
+        "midterm": 90,
+        "final": 77,
+        "finalGrade": 83.5
+      }
+    },
+    {
+      "firstName": "Kerry",
+      "lastName": "Calloway",
+      "id": 23452744,
+      "grades": {
+        "midterm": 25,
+        "final": 55,
+        "finalGrade": 59
+      }
+    },
+    {
+      "firstName": "Justin",
+      "lastName": "Smith",
+      "id": 10152353,
+      "grades": {
+        "midterm": 60,
+        "final": 50,
+        "finalGrade": 55
+      }
+    }
+  ]
+}

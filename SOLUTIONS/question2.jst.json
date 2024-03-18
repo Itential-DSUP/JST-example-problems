@@ -1,0 +1,745 @@
+{
+  "name": "question2",
+  "incoming": [
+    {
+      "$id": "classA",
+      "type": "object",
+      "properties": {
+        "className": {
+          "type": "string",
+          "examples": [
+            "Calculus I"
+          ]
+        },
+        "classCode": {
+          "type": "string",
+          "examples": [
+            "CLC01"
+          ]
+        },
+        "scheduleDays": {
+          "type": "string",
+          "examples": [
+            "MWF"
+          ]
+        },
+        "scheduleTimes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "startHour": {
+                "type": "string",
+                "examples": [
+                  "2PM"
+                ]
+              },
+              "endHour": {
+                "type": "string",
+                "examples": [
+                  "4PM"
+                ]
+              }
+            },
+            "required": []
+          }
+        },
+        "location": {
+          "type": "object",
+          "properties": {
+            "building": {
+              "type": "string",
+              "examples": [
+                "105"
+              ]
+            },
+            "room": {
+              "type": "string",
+              "examples": [
+                "327"
+              ]
+            }
+          },
+          "required": []
+        },
+        "students": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "firstName": {
+                "type": "string",
+                "examples": []
+              },
+              "lastName": {
+                "type": "string",
+                "examples": []
+              },
+              "id": {
+                "type": "integer",
+                "examples": []
+              },
+              "grades": {
+                "type": "object",
+                "properties": {
+                  "midterm": {
+                    "type": "integer",
+                    "examples": [
+                      60
+                    ]
+                  },
+                  "final": {
+                    "type": "integer",
+                    "examples": []
+                  },
+                  "finalGrade": {
+                    "type": "integer",
+                    "examples": []
+                  }
+                },
+                "required": []
+              }
+            },
+            "required": []
+          },
+          "examples": [
+            [
+              {
+                "firstName": "Justin",
+                "lastName": "Smith",
+                "id": 23452353,
+                "grades": {
+                  "midterm": 60,
+                  "final": 80,
+                  "finalGrade": 70
+                }
+              },
+              {
+                "firstName": "Alex",
+                "lastName": "Yang",
+                "id": 22482353,
+                "grades": {
+                  "midterm": 88,
+                  "final": 50,
+                  "finalGrade": 69
+                }
+              },
+              {
+                "firstName": "Travis",
+                "lastName": "Bird",
+                "id": 23459873,
+                "grades": {
+                  "midterm": 60,
+                  "final": 80,
+                  "finalGrade": 70
+                }
+              },
+              {
+                "firstName": "Daniel",
+                "lastName": "Nicks",
+                "id": 23697353,
+                "grades": {
+                  "midterm": 99,
+                  "final": 85,
+                  "finalGrade": 92
+                }
+              },
+              {
+                "firstName": "Steven",
+                "lastName": "Bolton",
+                "id": 14552353,
+                "grades": {
+                  "midterm": 60,
+                  "final": 55,
+                  "finalGrade": 57.5
+                }
+              },
+              {
+                "firstName": "Marcos",
+                "lastName": "Fletcher",
+                "id": 23678353,
+                "grades": {
+                  "midterm": 77,
+                  "final": 72,
+                  "finalGrade": 74.5
+                }
+              },
+              {
+                "firstName": "Jared",
+                "lastName": "Rosen",
+                "id": 23655353,
+                "grades": {
+                  "midterm": 40,
+                  "final": 62,
+                  "finalGrade": 51
+                }
+              },
+              {
+                "firstName": "John",
+                "lastName": "Robinson",
+                "id": 23456453,
+                "grades": {
+                  "midterm": 72,
+                  "final": 55,
+                  "finalGrade": 63.5
+                }
+              },
+              {
+                "firstName": "Justin",
+                "lastName": "Smith",
+                "id": 23452222,
+                "grades": {
+                  "midterm": 90,
+                  "final": 77,
+                  "finalGrade": 83.5
+                }
+              },
+              {
+                "firstName": "Kerry",
+                "lastName": "Calloway",
+                "id": 23452744,
+                "grades": {
+                  "midterm": 25,
+                  "final": 55,
+                  "finalGrade": 59
+                }
+              },
+              {
+                "firstName": "Justin",
+                "lastName": "Smith",
+                "id": 10152353,
+                "grades": {
+                  "midterm": 60,
+                  "final": 50,
+                  "finalGrade": 55
+                }
+              }
+            ]
+          ]
+        }
+      },
+      "required": []
+    }
+  ],
+  "outgoing": [
+    {
+      "$id": "averageFinalGradePassingStudents",
+      "type": "number",
+      "examples": [
+        99.4
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "type": "method",
+      "library": "Array",
+      "method": "filter",
+      "args": [
+        null,
+        "onlyPassingStudents"
+      ],
+      "view": {
+        "row": 2,
+        "col": 1
+      }
+    },
+    {
+      "id": 2,
+      "type": "assign",
+      "from": {
+        "location": "incoming",
+        "name": "classA",
+        "ptr": "/students"
+      },
+      "to": {
+        "location": "method",
+        "name": 1,
+        "ptr": "/args/0/value"
+      }
+    },
+    {
+      "id": 3,
+      "type": "method",
+      "library": "Array",
+      "method": "length",
+      "args": [
+        null
+      ],
+      "view": {
+        "row": 2,
+        "col": 2
+      }
+    },
+    {
+      "id": 4,
+      "type": "assign",
+      "from": {
+        "location": "method",
+        "name": 1,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "method",
+        "name": 3,
+        "ptr": "/args/0/value"
+      }
+    },
+    {
+      "id": 5,
+      "type": "method",
+      "library": "Math",
+      "method": "divide",
+      "args": [
+        null,
+        null
+      ],
+      "view": {
+        "row": 2,
+        "col": 3
+      }
+    },
+    {
+      "id": 6,
+      "type": "method",
+      "library": "Array",
+      "method": "reduce",
+      "args": [
+        null,
+        "sumAllFinalGrade",
+        0
+      ],
+      "view": {
+        "row": 1,
+        "col": 2
+      }
+    },
+    {
+      "id": 7,
+      "type": "assign",
+      "from": {
+        "location": "method",
+        "name": 1,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "method",
+        "name": 6,
+        "ptr": "/args/0/value"
+      }
+    },
+    {
+      "id": 8,
+      "type": "assign",
+      "from": {
+        "location": "method",
+        "name": 6,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "method",
+        "name": 5,
+        "ptr": "/args/0/value"
+      }
+    },
+    {
+      "id": 9,
+      "type": "assign",
+      "from": {
+        "location": "method",
+        "name": 3,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "method",
+        "name": 5,
+        "ptr": "/args/1/value"
+      }
+    },
+    {
+      "id": 10,
+      "type": "assign",
+      "from": {
+        "location": "method",
+        "name": 5,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "outgoing",
+        "name": "averageFinalGradePassingStudents",
+        "ptr": ""
+      }
+    }
+  ],
+  "functions": [
+    {
+      "name": "onlyPassingStudents",
+      "incoming": [
+        {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string",
+              "examples": [
+                "Justin"
+              ]
+            },
+            "lastName": {
+              "type": "string",
+              "examples": [
+                "Smith"
+              ]
+            },
+            "id": {
+              "type": "integer",
+              "examples": [
+                23452353
+              ]
+            },
+            "grades": {
+              "type": "object",
+              "properties": {
+                "midterm": {
+                  "type": "integer",
+                  "examples": [
+                    60
+                  ]
+                },
+                "final": {
+                  "type": "integer",
+                  "examples": [
+                    80
+                  ]
+                },
+                "finalGrade": {
+                  "type": "integer",
+                  "examples": [
+                    70
+                  ]
+                }
+              },
+              "required": []
+            }
+          },
+          "required": [],
+          "$id": "element"
+        },
+        {
+          "title": "index",
+          "type": "number",
+          "optional": true,
+          "$id": "index"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "firstName": {
+                "type": "string",
+                "examples": [
+                  "Justin"
+                ]
+              },
+              "lastName": {
+                "type": "string",
+                "examples": [
+                  "Smith"
+                ]
+              },
+              "id": {
+                "type": "integer",
+                "examples": [
+                  23452353
+                ]
+              },
+              "grades": {
+                "type": "object",
+                "properties": {
+                  "midterm": {
+                    "type": "integer",
+                    "examples": [
+                      60
+                    ]
+                  },
+                  "final": {
+                    "type": "integer",
+                    "examples": [
+                      80
+                    ]
+                  },
+                  "finalGrade": {
+                    "type": "integer",
+                    "examples": [
+                      70
+                    ]
+                  }
+                },
+                "required": []
+              }
+            },
+            "required": []
+          },
+          "$id": "array",
+          "optional": true
+        },
+        {
+          "$id": "thisArg",
+          "type": "object",
+          "properties": {},
+          "isContext": true,
+          "isThis": true
+        }
+      ],
+      "outgoing": [
+        {
+          "title": "return",
+          "type": "boolean",
+          "$id": "return"
+        }
+      ],
+      "steps": [
+        {
+          "id": 1,
+          "type": "method",
+          "library": "Relational",
+          "method": "lessThan",
+          "args": [
+            null,
+            60
+          ],
+          "view": {
+            "row": 1,
+            "col": 1
+          }
+        },
+        {
+          "id": 4,
+          "type": "assign",
+          "from": {
+            "location": "incoming",
+            "name": "element",
+            "ptr": "/grades/finalGrade"
+          },
+          "to": {
+            "location": "method",
+            "name": 1,
+            "ptr": "/args/0/value"
+          }
+        },
+        {
+          "id": 5,
+          "type": "method",
+          "library": "Logical",
+          "method": "not",
+          "args": [
+            null
+          ],
+          "view": {
+            "row": 1,
+            "col": 2
+          }
+        },
+        {
+          "id": 6,
+          "type": "assign",
+          "from": {
+            "location": "method",
+            "name": 1,
+            "ptr": "/return"
+          },
+          "to": {
+            "location": "method",
+            "name": 5,
+            "ptr": "/args/0/value"
+          }
+        },
+        {
+          "id": 7,
+          "type": "assign",
+          "from": {
+            "location": "method",
+            "name": 5,
+            "ptr": "/return"
+          },
+          "to": {
+            "location": "outgoing",
+            "name": "return",
+            "ptr": ""
+          }
+        }
+      ],
+      "functions": [],
+      "view": {
+        "col": 2,
+        "row": 4
+      },
+      "id": "onlyPassingStudents",
+      "comments": []
+    },
+    {
+      "name": "sumAllFinalGrade",
+      "incoming": [
+        {
+          "$id": "accumulator",
+          "type": [
+            "array",
+            "boolean",
+            "number",
+            "integer",
+            "string",
+            "object",
+            "null"
+          ]
+        },
+        {
+          "type": [
+            "array",
+            "boolean",
+            "number",
+            "integer",
+            "string",
+            "object",
+            "null"
+          ],
+          "$id": "currentValue"
+        },
+        {
+          "title": "index",
+          "type": "number",
+          "optional": true,
+          "$id": "index"
+        },
+        {
+          "type": "array",
+          "$id": "array",
+          "optional": true
+        },
+        {
+          "$id": "thisArg",
+          "type": "object",
+          "properties": {},
+          "isContext": true,
+          "isThis": true
+        }
+      ],
+      "outgoing": [
+        {
+          "title": "accumulator",
+          "type": [
+            "array",
+            "boolean",
+            "number",
+            "integer",
+            "string",
+            "object",
+            "null"
+          ],
+          "$id": "accumulator"
+        }
+      ],
+      "steps": [
+        {
+          "id": 1,
+          "type": "method",
+          "library": "Math",
+          "method": "add",
+          "args": [
+            null,
+            null
+          ],
+          "view": {
+            "row": 1,
+            "col": 2
+          }
+        },
+        {
+          "id": 2,
+          "type": "assign",
+          "from": {
+            "location": "method",
+            "name": 1,
+            "ptr": "/return"
+          },
+          "to": {
+            "location": "outgoing",
+            "name": "accumulator",
+            "ptr": ""
+          }
+        },
+        {
+          "id": 3,
+          "type": "method",
+          "library": "Object",
+          "method": "optional chaining",
+          "args": [
+            null,
+            "grades",
+            "finalGrade"
+          ],
+          "view": {
+            "row": 2,
+            "col": 1
+          }
+        },
+        {
+          "id": 4,
+          "type": "assign",
+          "from": {
+            "location": "incoming",
+            "name": "accumulator",
+            "ptr": ""
+          },
+          "to": {
+            "location": "method",
+            "name": 1,
+            "ptr": "/args/0/value"
+          }
+        },
+        {
+          "id": 5,
+          "type": "assign",
+          "from": {
+            "location": "method",
+            "name": 3,
+            "ptr": "/return"
+          },
+          "to": {
+            "location": "method",
+            "name": 1,
+            "ptr": "/args/1/value"
+          }
+        },
+        {
+          "id": 6,
+          "type": "assign",
+          "from": {
+            "location": "incoming",
+            "name": "currentValue",
+            "ptr": ""
+          },
+          "to": {
+            "location": "method",
+            "name": 3,
+            "ptr": "/args/0/value"
+          }
+        }
+      ],
+      "functions": [],
+      "view": {
+        "col": 2,
+        "row": 4
+      },
+      "id": "sumAllFinalGrade",
+      "comments": []
+    }
+  ],
+  "view": {
+    "col": 3,
+    "row": 4
+  },
+  "description": "",
+  "comments": [],
+  "version": "3.17.12"
+}

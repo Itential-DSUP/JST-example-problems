@@ -1,0 +1,1348 @@
+{
+  "name": "question3",
+  "incoming": [
+    {
+      "$id": "classA",
+      "type": "object",
+      "properties": {
+        "className": {
+          "type": "string",
+          "examples": [
+            "Calculus I"
+          ]
+        },
+        "classCode": {
+          "type": "string",
+          "examples": [
+            "CLC01"
+          ]
+        },
+        "scheduleDays": {
+          "type": "string",
+          "examples": [
+            "MWF"
+          ]
+        },
+        "scheduleTimes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "startHour": {
+                "type": "string",
+                "examples": [
+                  "2PM"
+                ]
+              },
+              "endHour": {
+                "type": "string",
+                "examples": [
+                  "4PM"
+                ]
+              }
+            },
+            "required": []
+          }
+        },
+        "location": {
+          "type": "object",
+          "properties": {
+            "building": {
+              "type": "string",
+              "examples": [
+                "105"
+              ]
+            },
+            "room": {
+              "type": "string",
+              "examples": [
+                "327"
+              ]
+            }
+          },
+          "required": []
+        },
+        "students": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "firstName": {
+                "type": "string",
+                "examples": []
+              },
+              "lastName": {
+                "type": "string",
+                "examples": []
+              },
+              "id": {
+                "type": "integer",
+                "examples": []
+              },
+              "grades": {
+                "type": "object",
+                "properties": {
+                  "midterm": {
+                    "type": "integer",
+                    "examples": [
+                      60
+                    ]
+                  },
+                  "final": {
+                    "type": "integer",
+                    "examples": []
+                  },
+                  "finalGrade": {
+                    "type": "integer",
+                    "examples": []
+                  }
+                },
+                "required": []
+              }
+            },
+            "required": []
+          },
+          "examples": [
+            [
+              {
+                "firstName": "Justin",
+                "lastName": "Smith",
+                "id": 23452353,
+                "grades": {
+                  "midterm": 60,
+                  "final": 80,
+                  "finalGrade": 70
+                }
+              },
+              {
+                "firstName": "Alex",
+                "lastName": "Yang",
+                "id": 22482353,
+                "grades": {
+                  "midterm": 88,
+                  "final": 50,
+                  "finalGrade": 69
+                }
+              },
+              {
+                "firstName": "Travis",
+                "lastName": "Bird",
+                "id": 23459873,
+                "grades": {
+                  "midterm": 60,
+                  "final": 80,
+                  "finalGrade": 70
+                }
+              },
+              {
+                "firstName": "Daniel",
+                "lastName": "Nicks",
+                "id": 23697353,
+                "grades": {
+                  "midterm": 99,
+                  "final": 85,
+                  "finalGrade": 92
+                }
+              },
+              {
+                "firstName": "Steven",
+                "lastName": "Bolton",
+                "id": 14552353,
+                "grades": {
+                  "midterm": 60,
+                  "final": 55,
+                  "finalGrade": 57.5
+                }
+              },
+              {
+                "firstName": "Marcos",
+                "lastName": "Fletcher",
+                "id": 23678353,
+                "grades": {
+                  "midterm": 77,
+                  "final": 72,
+                  "finalGrade": 74.5
+                }
+              },
+              {
+                "firstName": "Jared",
+                "lastName": "Rosen",
+                "id": 23655353,
+                "grades": {
+                  "midterm": 40,
+                  "final": 62,
+                  "finalGrade": 51
+                }
+              },
+              {
+                "firstName": "John",
+                "lastName": "Robinson",
+                "id": 23456453,
+                "grades": {
+                  "midterm": 72,
+                  "final": 55,
+                  "finalGrade": 63.5
+                }
+              },
+              {
+                "firstName": "Justin",
+                "lastName": "Smith",
+                "id": 23452222,
+                "grades": {
+                  "midterm": 90,
+                  "final": 77,
+                  "finalGrade": 83.5
+                }
+              },
+              {
+                "firstName": "Kerry",
+                "lastName": "Calloway",
+                "id": 23452744,
+                "grades": {
+                  "midterm": 25,
+                  "final": 55,
+                  "finalGrade": 59
+                }
+              },
+              {
+                "firstName": "Justin",
+                "lastName": "Smith",
+                "id": 10152353,
+                "grades": {
+                  "midterm": 60,
+                  "final": 50,
+                  "finalGrade": 55
+                }
+              }
+            ]
+          ]
+        }
+      },
+      "required": []
+    },
+    {
+      "$id": "classB",
+      "type": "object",
+      "properties": {
+        "className": {
+          "type": "string",
+          "examples": [
+            "Biology I"
+          ]
+        },
+        "classCode": {
+          "type": "string",
+          "examples": [
+            "BIO01"
+          ]
+        },
+        "scheduleDays": {
+          "type": "string",
+          "examples": [
+            "TuTh"
+          ]
+        },
+        "scheduleTimes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "startHour": {
+                "type": "string",
+                "examples": [
+                  "11AM"
+                ]
+              },
+              "endHour": {
+                "type": "string",
+                "examples": [
+                  "1PM"
+                ]
+              }
+            },
+            "required": []
+          }
+        },
+        "location": {
+          "type": "object",
+          "properties": {
+            "building": {
+              "type": "string",
+              "examples": [
+                "122"
+              ]
+            },
+            "room": {
+              "type": "string",
+              "examples": [
+                "789"
+              ]
+            }
+          },
+          "required": []
+        },
+        "students": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "firstName": {
+                "type": "string",
+                "examples": [
+                ]
+              },
+              "lastName": {
+                "type": "string",
+                "examples": [
+                ]
+              },
+              "id": {
+                "type": "integer",
+                "examples": [
+                ]
+              },
+              "grades": {
+                "type": "object",
+                "properties": {
+                  "midterm": {
+                    "type": "integer",
+                    "examples": [
+                    ]
+                  },
+                  "final": {
+                    "type": "integer",
+                    "examples": [
+                    ]
+                  },
+                  "finalGrade": {
+                    "type": "integer",
+                    "examples": [
+                    ]
+                  }
+                },
+                "required": []
+              }
+            },
+            "required": []
+          },
+          "examples":[[
+            {
+              "firstName": "Justin",
+              "lastName": "Smith",
+              "id": 23452353,
+              "grades": {
+                "midterm": 60,
+                "final": 40,
+                "finalGrade": 50
+              }
+            },
+            {
+              "firstName": "Alex",
+              "lastName": "Yang",
+              "id": 22482353,
+              "grades": {
+                "midterm": 88,
+                "final": 50,
+                "finalGrade": 69
+              }
+            },
+            {
+              "firstName": "Travis",
+              "lastName": "Bird",
+              "id": 23459873,
+              "grades": {
+                "midterm": 60,
+                "final": 80,
+                "finalGrade": 70
+              }
+            },
+            {
+              "firstName": "Daniel",
+              "lastName": "Nicks",
+              "id": 23697353,
+              "grades": {
+                "midterm": 95,
+                "final": 87,
+                "finalGrade": 91
+              }
+            },
+            {
+              "firstName": "Steven",
+              "lastName": "Bolton",
+              "id": 14552353,
+              "grades": {
+                "midterm": 70,
+                "final": 80,
+                "finalGrade": 75
+              }
+            },
+            {
+              "firstName": "Marcos",
+              "lastName": "Fletcher",
+              "id": 23678353,
+              "grades": {
+                "midterm": 77,
+                "final": 72,
+                "finalGrade": 74.5
+              }
+            },
+            {
+              "firstName": "Jared",
+              "lastName": "Rosen",
+              "id": 23655353,
+              "grades": {
+                "midterm": 40,
+                "final": 62,
+                "finalGrade": 51
+              }
+            },
+            {
+              "firstName": "John",
+              "lastName": "Robinson",
+              "id": 23456453,
+              "grades": {
+                "midterm": 72,
+                "final": 55,
+                "finalGrade": 63.5
+              }
+            },
+            {
+              "firstName": "Justin",
+              "lastName": "Smith",
+              "id": 23452222,
+              "grades": {
+                "midterm": 90,
+                "final": 77,
+                "finalGrade": 83.5
+              }
+            },
+            {
+              "firstName": "Kerry",
+              "lastName": "Calloway",
+              "id": 23452744,
+              "grades": {
+                "midterm": 55,
+                "final": 65,
+                "finalGrade": 60
+              }
+            },
+            {
+              "firstName": "Justin",
+              "lastName": "Smith",
+              "id": 10152353,
+              "grades": {
+                "midterm": 60,
+                "final": 50,
+                "finalGrade": 55
+              }
+            }
+          ]]
+        }
+      },
+      "required": []
+    }
+  ],
+  "outgoing": [
+    {
+      "$id": "studentsFailedEitherCAorCB",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "examples": [
+              "Justin"
+            ]
+          },
+          "lastName": {
+            "type": "string",
+            "examples": [
+              "Smith"
+            ]
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              23452353
+            ]
+          },
+          "grades": {
+            "type": "object",
+            "properties": {
+              "midterm": {
+                "type": "integer",
+                "examples": [
+                  60
+                ]
+              },
+              "final": {
+                "type": "integer",
+                "examples": [
+                  40
+                ]
+              },
+              "finalGrade": {
+                "type": "integer",
+                "examples": [
+                  50
+                ]
+              }
+            },
+            "required": []
+          }
+        },
+        "required": []
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "type": "method",
+      "library": "Array",
+      "method": "filter",
+      "args": [
+        null,
+        "failingStudents"
+      ],
+      "view": {
+        "row": 1,
+        "col": 1
+      }
+    },
+    {
+      "id": 2,
+      "type": "assign",
+      "from": {
+        "location": "incoming",
+        "name": "classA",
+        "ptr": "/students"
+      },
+      "to": {
+        "location": "method",
+        "name": 1,
+        "ptr": "/args/0/value"
+      }
+    },
+    {
+      "id": 4,
+      "type": "method",
+      "library": "Array",
+      "method": "filter",
+      "args": [
+        null,
+        "failingStudents"
+      ],
+      "view": {
+        "row": 2,
+        "col": 1
+      }
+    },
+    {
+      "id": 5,
+      "type": "assign",
+      "from": {
+        "location": "incoming",
+        "name": "classB",
+        "ptr": "/students"
+      },
+      "to": {
+        "location": "method",
+        "name": 4,
+        "ptr": "/args/0/value"
+      }
+    },
+    {
+      "id": 6,
+      "type": "method",
+      "library": "Array",
+      "method": "reduce",
+      "args": [
+        null,
+        "calculate unique list",
+        null
+      ],
+      "view": {
+        "row": 1,
+        "col": 2
+      }
+    },
+    {
+      "id": 7,
+      "type": "assign",
+      "from": {
+        "location": "method",
+        "name": 1,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "method",
+        "name": 6,
+        "ptr": "/args/0/value"
+      }
+    },
+    {
+      "id": 8,
+      "type": "assign",
+      "from": {
+        "location": "method",
+        "name": 4,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "method",
+        "name": 6,
+        "ptr": "/args/2/value"
+      }
+    },
+    {
+      "id": 9,
+      "type": "assign",
+      "from": {
+        "location": "method",
+        "name": 6,
+        "ptr": "/return"
+      },
+      "to": {
+        "location": "outgoing",
+        "name": "studentsFailedEitherCAorCB",
+        "ptr": ""
+      }
+    }
+  ],
+  "functions": [
+    {
+      "name": "failingStudents",
+      "incoming": [
+        {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string",
+              "examples": [
+                "Justin"
+              ]
+            },
+            "lastName": {
+              "type": "string",
+              "examples": [
+                "Smith"
+              ]
+            },
+            "id": {
+              "type": "integer",
+              "examples": [
+                23452353
+              ]
+            },
+            "grades": {
+              "type": "object",
+              "properties": {
+                "midterm": {
+                  "type": "integer",
+                  "examples": [
+                    60
+                  ]
+                },
+                "final": {
+                  "type": "integer",
+                  "examples": [
+                    80
+                  ]
+                },
+                "finalGrade": {
+                  "type": "integer",
+                  "examples": [
+                    70
+                  ]
+                }
+              },
+              "required": []
+            }
+          },
+          "required": [],
+          "$id": "element"
+        },
+        {
+          "title": "index",
+          "type": "number",
+          "optional": true,
+          "$id": "index"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "firstName": {
+                "type": "string",
+                "examples": [
+                  "Justin"
+                ]
+              },
+              "lastName": {
+                "type": "string",
+                "examples": [
+                  "Smith"
+                ]
+              },
+              "id": {
+                "type": "integer",
+                "examples": [
+                  23452353
+                ]
+              },
+              "grades": {
+                "type": "object",
+                "properties": {
+                  "midterm": {
+                    "type": "integer",
+                    "examples": [
+                      60
+                    ]
+                  },
+                  "final": {
+                    "type": "integer",
+                    "examples": [
+                      80
+                    ]
+                  },
+                  "finalGrade": {
+                    "type": "integer",
+                    "examples": [
+                      70
+                    ]
+                  }
+                },
+                "required": []
+              }
+            },
+            "required": []
+          },
+          "$id": "array",
+          "optional": true
+        },
+        {
+          "$id": "thisArg",
+          "type": "object",
+          "properties": {},
+          "isContext": true
+        }
+      ],
+      "outgoing": [
+        {
+          "title": "return",
+          "type": "boolean",
+          "$id": "return"
+        }
+      ],
+      "steps": [
+        {
+          "id": 1,
+          "type": "method",
+          "library": "Relational",
+          "method": "lessThan",
+          "args": [
+            null,
+            60
+          ],
+          "view": {
+            "row": 1,
+            "col": 1
+          }
+        },
+        {
+          "id": 3,
+          "type": "assign",
+          "from": {
+            "location": "method",
+            "name": 1,
+            "ptr": "/return"
+          },
+          "to": {
+            "location": "outgoing",
+            "name": "return",
+            "ptr": ""
+          }
+        },
+        {
+          "id": 4,
+          "type": "assign",
+          "from": {
+            "location": "incoming",
+            "name": "element",
+            "ptr": "/grades/finalGrade"
+          },
+          "to": {
+            "location": "method",
+            "name": 1,
+            "ptr": "/args/0/value"
+          }
+        }
+      ],
+      "functions": [],
+      "view": {
+        "col": 1,
+        "row": 4
+      },
+      "id": "failingStudents",
+      "comments": []
+    },
+    {
+      "name": "calculate unique list",
+      "incoming": [
+        {
+          "type": [
+            "array",
+            "boolean",
+            "number",
+            "integer",
+            "string",
+            "object",
+            "null"
+          ],
+          "$id": "accumulator"
+        },
+        {
+          "type": [
+            "array",
+            "boolean",
+            "number",
+            "integer",
+            "string",
+            "object",
+            "null"
+          ],
+          "$id": "currentValue"
+        },
+        {
+          "title": "index",
+          "type": "number",
+          "optional": true,
+          "$id": "index"
+        },
+        {
+          "type": "array",
+          "$id": "array",
+          "optional": true
+        },
+        {
+          "$id": "thisArg",
+          "type": "object",
+          "properties": {},
+          "isContext": true,
+          "isThis": true
+        }
+      ],
+      "outgoing": [
+        {
+          "title": "accumulator",
+          "type": [
+            "array",
+            "boolean",
+            "number",
+            "integer",
+            "string",
+            "object",
+            "null"
+          ],
+          "$id": "accumulator"
+        }
+      ],
+      "steps": [
+        {
+          "id": 1,
+          "type": "method",
+          "library": "Conditional",
+          "method": "ternary",
+          "args": [
+            null,
+            null,
+            null
+          ],
+          "view": {
+            "row": 2,
+            "col": 2
+          }
+        },
+        {
+          "id": 2,
+          "type": "assign",
+          "from": {
+            "location": "method",
+            "name": 1,
+            "ptr": "/return"
+          },
+          "to": {
+            "location": "outgoing",
+            "name": "accumulator",
+            "ptr": ""
+          }
+        },
+        {
+          "id": 6,
+          "type": "function",
+          "function": "userFunc_1",
+          "args": [
+            "",
+            ""
+          ],
+          "view": {
+            "row": 1,
+            "col": 2
+          }
+        },
+        {
+          "id": 7,
+          "type": "assign",
+          "from": {
+            "location": "function",
+            "name": 6,
+            "ptr": "/return/isIn"
+          },
+          "to": {
+            "location": "method",
+            "name": 1,
+            "ptr": "/args/0/value"
+          }
+        },
+        {
+          "id": 8,
+          "type": "assign",
+          "from": {
+            "location": "incoming",
+            "name": "accumulator",
+            "ptr": ""
+          },
+          "to": {
+            "location": "method",
+            "name": 1,
+            "ptr": "/args/1/value"
+          }
+        },
+        {
+          "id": 9,
+          "type": "assign",
+          "from": {
+            "location": "incoming",
+            "name": "accumulator",
+            "ptr": ""
+          },
+          "to": {
+            "location": "function",
+            "name": 6,
+            "ptr": "/args/0/value"
+          }
+        },
+        {
+          "id": 10,
+          "type": "assign",
+          "from": {
+            "location": "incoming",
+            "name": "currentValue",
+            "ptr": ""
+          },
+          "to": {
+            "location": "function",
+            "name": 6,
+            "ptr": "/args/1/value"
+          }
+        },
+        {
+          "id": 11,
+          "type": "method",
+          "library": "Array",
+          "method": "push",
+          "args": [
+            null,
+            null
+          ],
+          "view": {
+            "row": 3,
+            "col": 1
+          }
+        },
+        {
+          "id": 12,
+          "type": "assign",
+          "from": {
+            "location": "method",
+            "name": 11,
+            "ptr": "/return"
+          },
+          "to": {
+            "location": "method",
+            "name": 1,
+            "ptr": "/args/2/value"
+          }
+        },
+        {
+          "id": 13,
+          "type": "assign",
+          "from": {
+            "location": "incoming",
+            "name": "accumulator",
+            "ptr": ""
+          },
+          "to": {
+            "location": "method",
+            "name": 11,
+            "ptr": "/args/0/value"
+          }
+        },
+        {
+          "id": 14,
+          "type": "assign",
+          "from": {
+            "location": "incoming",
+            "name": "currentValue",
+            "ptr": ""
+          },
+          "to": {
+            "location": "method",
+            "name": 11,
+            "ptr": "/args/1/value"
+          }
+        }
+      ],
+      "functions": [
+        {
+          "name": "userFunc_1",
+          "incoming": [
+            {
+              "$id": "accu",
+              "type": "array"
+            },
+            {
+              "$id": "currentStudent",
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          ],
+          "outgoing": [
+            {
+              "$id": "isIn",
+              "type": "boolean",
+              "examples": [
+                true,
+                false
+              ]
+            }
+          ],
+          "steps": [
+            {
+              "id": 1,
+              "type": "method",
+              "library": "Array",
+              "method": "findIndex",
+              "args": [
+                null,
+                "ƒ_query_1",
+                null
+              ],
+              "view": {
+                "row": 1,
+                "col": 2
+              }
+            },
+            {
+              "id": 2,
+              "type": "assign",
+              "from": {
+                "location": "incoming",
+                "name": "accu",
+                "ptr": ""
+              },
+              "to": {
+                "location": "method",
+                "name": 1,
+                "ptr": "/args/0/value"
+              }
+            },
+            {
+              "id": 3,
+              "type": "method",
+              "library": "Object",
+              "method": "optional chaining",
+              "args": [
+                null,
+                "id"
+              ],
+              "view": {
+                "row": 2,
+                "col": 1
+              }
+            },
+            {
+              "id": 4,
+              "type": "assign",
+              "from": {
+                "location": "incoming",
+                "name": "currentStudent",
+                "ptr": ""
+              },
+              "to": {
+                "location": "method",
+                "name": 3,
+                "ptr": "/args/0/value"
+              }
+            },
+            {
+              "id": 5,
+              "type": "assign",
+              "from": {
+                "location": "method",
+                "name": 3,
+                "ptr": "/return"
+              },
+              "to": {
+                "location": "method",
+                "name": 1,
+                "ptr": "/args/2/value"
+              }
+            },
+            {
+              "id": 6,
+              "type": "method",
+              "library": "Equality",
+              "method": "nonidentity",
+              "args": [
+                null,
+                null
+              ],
+              "view": {
+                "row": 1,
+                "col": 3
+              }
+            },
+            {
+              "id": 7,
+              "type": "assign",
+              "from": {
+                "location": "method",
+                "name": 1,
+                "ptr": "/return"
+              },
+              "to": {
+                "location": "method",
+                "name": 6,
+                "ptr": "/args/0/value"
+              }
+            },
+            {
+              "id": 8,
+              "type": "assign",
+              "from": {
+                "location": "method",
+                "name": 6,
+                "ptr": "/return"
+              },
+              "to": {
+                "location": "outgoing",
+                "name": "isIn",
+                "ptr": ""
+              }
+            },
+            {
+              "id": 9,
+              "type": "declaration",
+              "library": "Number",
+              "method": "new Number",
+              "args": [
+                -1
+              ],
+              "view": {
+                "row": 2,
+                "col": 2
+              }
+            },
+            {
+              "id": 10,
+              "type": "assign",
+              "from": {
+                "location": "declaration",
+                "name": 9,
+                "ptr": "/return"
+              },
+              "to": {
+                "location": "method",
+                "name": 6,
+                "ptr": "/args/1/value"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "name": "ƒ_query_1",
+              "incoming": [
+                {
+                  "type": [
+                    "array",
+                    "boolean",
+                    "number",
+                    "integer",
+                    "string",
+                    "object",
+                    "null"
+                  ],
+                  "$id": "element"
+                },
+                {
+                  "title": "index",
+                  "type": "number",
+                  "optional": true,
+                  "$id": "index"
+                },
+                {
+                  "$id": "array",
+                  "type": "array",
+                  "optional": true
+                },
+                {
+                  "$id": "thisArg",
+                  "type": "object",
+                  "properties": {
+                    "0_optional chaining return": {
+                      "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "integer",
+                        "string",
+                        "object",
+                        "null"
+                      ]
+                    }
+                  },
+                  "isContext": true,
+                  "isThis": true
+                }
+              ],
+              "outgoing": [
+                {
+                  "title": "return",
+                  "type": "boolean",
+                  "$id": "return"
+                }
+              ],
+              "steps": [
+                {
+                  "id": 1,
+                  "type": "method",
+                  "library": "Object",
+                  "method": "optional chaining",
+                  "args": [
+                    null,
+                    "id"
+                  ],
+                  "view": {
+                    "row": 1,
+                    "col": 1
+                  }
+                },
+                {
+                  "id": 2,
+                  "type": "assign",
+                  "from": {
+                    "location": "incoming",
+                    "name": "element",
+                    "ptr": ""
+                  },
+                  "to": {
+                    "location": "method",
+                    "name": 1,
+                    "ptr": "/args/0/value"
+                  }
+                },
+                {
+                  "id": 3,
+                  "type": "method",
+                  "library": "Equality",
+                  "method": "identity",
+                  "args": [
+                    null,
+                    null
+                  ],
+                  "view": {
+                    "row": 2,
+                    "col": 2
+                  }
+                },
+                {
+                  "id": 4,
+                  "type": "assign",
+                  "from": {
+                    "location": "method",
+                    "name": 1,
+                    "ptr": "/return"
+                  },
+                  "to": {
+                    "location": "method",
+                    "name": 3,
+                    "ptr": "/args/0/value"
+                  }
+                },
+                {
+                  "id": 5,
+                  "type": "assign",
+                  "from": {
+                    "location": "incoming",
+                    "name": "thisArg",
+                    "ptr": "/0_optional chaining return"
+                  },
+                  "to": {
+                    "location": "method",
+                    "name": 3,
+                    "ptr": "/args/1/value"
+                  }
+                },
+                {
+                  "id": 6,
+                  "type": "assign",
+                  "from": {
+                    "location": "method",
+                    "name": 3,
+                    "ptr": "/return"
+                  },
+                  "to": {
+                    "location": "outgoing",
+                    "name": "return",
+                    "ptr": ""
+                  }
+                }
+              ],
+              "functions": [],
+              "view": {
+                "col": 2,
+                "row": 4
+              },
+              "id": "ƒ_query_1",
+              "comments": []
+            }
+          ],
+          "view": {
+            "col": 3,
+            "row": 4
+          },
+          "id": "userFunc_1",
+          "comments": []
+        }
+      ],
+      "view": {
+        "col": 2,
+        "row": 4
+      },
+      "id": "calculate unique list",
+      "comments": []
+    }
+  ],
+  "view": {
+    "col": 2,
+    "row": 4
+  },
+  "description": "",
+  "comments": [],
+  "version": "3.17.12"
+}
